@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuansa Coffee | Official Website</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #2D2424;
+            --accent-warm: #B99470;
+            --soft-cream: #FBF8F1;
+            --text-main: #443C3C;
+            --white: #ffffff;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* --- Global Components --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .btn-primary {
+            background: var(--accent-warm);
+            color: var(--white);
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(251, 248, 241, 0.7), rgba(251, 248, 241, 0.7)), 
+                        url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1478&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-inner {
+            max-width: 650px;
+        }
+
+        .hero-inner h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--primary-dark);
+        }
+
+        .hero-inner p {
+            font-size: 18px;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        /* --- Contact / Details --- */
+        .details-grid {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-box {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.03);
+        }
+
+        .contact-box h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .meta-label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--accent-warm);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .meta-value {
+            font-size: 18px;
+            margin-bottom: 25px;
+            display: block;
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-dark);
+            padding: 60px 0;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .f-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .copy {
+            font-size: 13px;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .details-grid { grid-template-columns: 1fr; }
+            .hero-inner h1 { font-size: 48px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="brand">NUANSA.</a>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-inner">
+                    <h1>Seni Menikmati Waktu.</h1>
+                    <p>Hadir untuk memberikan ruang jeda di tengah bisingnya dunia. Nikmati racikan kopi dengan suasana yang dirancang untuk ketenangan.</p>
+                    <a href="#contact" class="btn-primary">Kunjungi Kami</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="contact">
+            <div class="details-grid">
+                <div class="contact-image">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1447&auto=format&fit=crop" alt="Ambience" style="width:100%; border-radius:12px;">
+                </div>
+                <div class="contact-box">
+                    <h2>Hubungi Kami</h2>
+                    
+                    <span class="meta-label">Founder & Owner</span>
+                    <span class="meta-value">Satria Untung Wibawa</span>
+
+                    <span class="meta-label">Inquiries</span>
+                    <a href="https://wa.me/6282185835787" class="meta-value">+62 82185835787</a>
+
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Tangerang Selatan, Banten</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="f-logo">NUANSA COFFEE</span>
+            <p class="copy">&copy; 2026 Crafted by Satria Untung Wibawa. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

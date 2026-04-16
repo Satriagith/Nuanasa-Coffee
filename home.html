@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuansa Coffee | Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --kopi-tua: #1c1c14;
+            --karamel: #0c3760;
+            --krem-hangat: #855f21;
+            --teks: rgba(247, 247, 247, 0.4);
+            --shadow: 0 10px 30px rgba(19, 23, 23, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--krem-hangat);
+            color: var(--teks);
+            line-height: 1.7;
+        }
+
+        body {
+            /* Masukkan link gambar kopi yang sudah kamu salin tadi di sini */
+            background: linear-gradient(rgba(194, 120, 41, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://media.istockphoto.com/id/1202710779/id/foto/tangan-memegang-segelas-latte-yang-disajikan-dengan-tabung-kaca-di-meja-kerja-kayu-konsep.jpg?s=1024x1024&w=is&k=20&c=3B07cnQFB5P2N3PxEaUbJ_Y9OiLGSZXe9f_-TCFnvUE=');
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ini penting agar gambar tidak ikut bergeser saat di-scroll */
+            background-repeat: no-repeat;
+            margin: 0;
+            color: rgb(234, 220, 220); /* Mengubah semua teks menjadi putih agar terlihat di background gelap */
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(194, 120, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--kopi-tua);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white(--kopi-tua);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: white(--karamel); }
+
+        .hero {
+            padding: 60px 8% 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            color: rgb(33, 33, 29);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 30px 100px 30px 30px;
+            box-shadow: 20px 20px 0px var(--aksen-manis);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--kopi-tua);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: var(--krem-hangat);
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            border-color: var(--aksen-manis);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 20px 0 15px;
+            color: var(--kopi-tua);
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #efd8cb;
+        }
+
+        /* --- CTA Section --- */
+        .cta {
+            margin: 80px 8%;
+            padding: 60px;
+            background: var(--kopi-tua);
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        body {
+            background-color: #efd8cb; /* Warna krem pucat */
+            margin: 0;
+            padding: 0;
+        }
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Navigasi Kecil untuk kembali */
+        .back-nav {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .back-nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+         .back-nav a:hover {
+            background: rgb(115, 104, 104);
+            color: rgb(255, 255, 255);
+        }
+
+        .btn-sweet {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--karamel);
+            color: rgb(224, 214, 214);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-sweet:hover { background: var(--aksen-manis); color: var(--kopi-tua); }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-image { order: -1; }
+            .hero-text h1 { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-nav">
+        <a href="index.html">← Kembali</a>
+</div>
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Ruang Nyaman untuk Cerita Anda.</h1>
+            <p>Lebih dari sekadar kopi, kami menghadirkan nuansa yang memadukan kehangatan rumah dan cita rasa modern.</p>
+            <a href="#features" class="btn-sweet">Eksplor Nuansa</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1559925393-8be0ec418cd9?q=80&w=1471&auto=format&fit=crop" alt="Cafe Ambience">
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Kenapa Memilih Nuansa?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div style="font-size: 40px;">☕</div>
+                <h3>Biji Kopi Pilihan</h3>
+                <p>Setiap cangkir diseduh dari biji kopi lokal kualitas terbaik yang dipanggang dengan penuh ketelitian.</p>
+            </div>
+            <div class="feature-card">
+                <div style="font-size: 40px;">🥐</div>
+                <h3>Camilan Manis</h3>
+                <p>Pendamping sempurna untuk kopimu. Dibuat segar setiap pagi untuk memastikan rasa yang autentik.</p>
+            </div>
+            <div class="feature-card">
+                <div style="font-size: 40px;">🌿</div>
+                <h3>Suasana Hangat</h3>
+                <p>Desain interior yang minimalis namun hangat, cocok untuk bekerja, diskusi, atau sekadar menyendiri.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <h2>Siap Merasakan Nuansanya?</h2>
+        <p>Kunjungi kami hari ini dan temukan rasa favoritmu.</p>
+        <div style="margin-top: 20px;">
+            <strong>Satria Untung Wibawa</strong><br>
+            <span>WhatsApp: +62 82185835787</span>
+        </div>
+        <a href="https://wa.me/6282185835787" class="btn-sweet">Pesan Tempat</a>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; font-size: 13px; opacity: 0.6;">
+        &copy; 2026 Nuansa Coffee Store. Created for your comfort.
+    </footer>
+
+</body>
+</html>

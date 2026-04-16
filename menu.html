@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuansa Coffee | Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cokelat-gelap: #2D2424;
+            --karamel-muda: #D4A373;
+            --latte: #F2E9E4;
+            --putih-bersih: #FFFFFF;
+            --teks-abu: #666;
+        }
+
+        body {
+            /* Masukkan link gambar kopi yang sudah kamu salin tadi di sini */
+            background: linear-gradient(rgba(177, 117, 22, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://media.istockphoto.com/id/1284717905/id/foto/segelas-es-dalgona-coffee-kopi-kocok-berbulu-halus-trendi-dan-susu-dengan-latar-belakang-kayu.jpg?s=1024x1024&w=is&k=20&c=5P4C7J4D-nRIzm1gpxLI87ZnQVdYMcG9dRKkKYPhqaM=');
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ini penting agar gambar tidak ikut bergeser saat di-scroll */
+            background-repeat: no-repeat;
+            margin: 0;
+            color: white; /* Mengubah semua teks menjadi putih agar terlihat di background gelap */
+}
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FDF8F5;
+            margin: 0;
+            color: var(--cokelat-gelap);
+        }
+
+        .menu-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .header-menu {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header-menu h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--karamel-muda);
+            display: inline-block;
+            margin: 40px 0 25px 0;
+            padding-bottom: 5px;
+        }
+
+        /* Grid System */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-item {
+            background: var(--putih-bersih);
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .menu-img {
+            width: 80px;
+            height: 80px;
+            background-color: var(--latte);
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            flex: 1;
+        }
+
+        .menu-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .menu-info p {
+            font-size: 0.85rem;
+            color: var(--teks-abu);
+            margin: 0;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--karamel-muda);
+            font-size: 1rem;
+            margin-top: 8px;
+            display: block;
+        }
+
+        .back-nav {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .back-nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+         .back-nav a:hover {
+            background: rgb(115, 104, 104);
+            color: rgb(255, 255, 255);
+        }
+
+        .badge-hot { color: #e63946; font-size: 10px; font-weight: bold; }
+        .badge-ice { color: #457b9d; font-size: 10px; font-weight: bold; }
+
+        @media (max-width: 600px) {
+            .header-menu h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+     <div class="back-nav">
+        <a href="index.html">← Kembali</a>
+
+    <div class="menu-container">
+        <div class="header-menu">
+            <h1>Menu Nuansa</h1>
+            <p>Racikan penuh kenangan di setiap tegukan.</p>
+        </div>
+
+        <h2 class="category-title">Signature Series</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1541167760496-162955ed8a9f?w=200" class="menu-img" alt="Kopi Susu Nuansa">
+                <div class="menu-info">
+                    <span class="badge-ice">ICE</span>
+                    <h3>Kopi Susu Nuansa Jiwa</h3>
+                    <p>Espresso, susu segar, dan gula aren murni.</p>
+                    <span class="price">Rp 18.000</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200" class="menu-img" alt="Caramel Macchiato">
+                <div class="menu-info">
+                    <span class="badge-hot">HOT / ICE</span>
+                    <h3>Karamel Kenangan Manis</h3>
+                    <p>Sentuhan karamel lembut dengan foam tebal.</p>
+                    <span class="price">Rp 24.000</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="category-title">Bukan Kopi</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=200" class="menu-img" alt="Chocolate">
+                <div class="menu-info">
+                    <span class="badge-hot">HOT / ICE</span>
+                    <h3>Cokelat Pelipur Lara</h3>
+                    <p>Dark chocolate premium yang kental dan manis.</p>
+                    <span class="price">Rp 20.000</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=200" class="menu-img" alt="Matcha">
+                <div class="menu-info">
+                    <span class="badge-ice">ICE</span>
+                    <h3>Matcha Cerita Alam</h3>
+                    <p>Teh hijau Jepang asli dengan susu creamy.</p>
+                    <span class="price">Rp 22.000</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="category-title">Teman Cerita (Bites)</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=200" class="menu-img" alt="Croissant">
+                <div class="menu-info">
+                    <h3>Croissant Hangat</h3>
+                    <p>Pastry renyah dengan mentega melimpah.</p>
+                    <span class="price">Rp 15.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
